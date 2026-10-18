@@ -1,9 +1,12 @@
+import { Outlet } from "react-router"
+import Header from "./components/Header"
 
 function App() {
 
   return (
     <div>
-      welcome to react
+   <Header/>
+   <Outlet/>
     </div>
   )
 }
