@@ -1,8 +1,8 @@
-import React from 'react'
-
 const Hoppies = () => {
   return (
-    <div>Hoppies</div>
+    <section id="hoppies" className="page-section" aria-labelledby="hoppies-heading">
+      <h2 id="hoppies-heading">Hoppies</h2>
+    </section>
   )
 }
 

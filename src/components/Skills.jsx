@@ -1,8 +1,8 @@
-import React from 'react'
-
 const Skills = () => {
   return (
-    <div>Skills</div>
+    <section id="skills" className="page-section" aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+    </section>
   )
 }
 
