@@ -5,6 +5,8 @@ import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Hoppies from './components/Hoppies'
 import Contacts from './components/Contacts'
+import Footer from './components/Footer'
+
 
 function App() {
   return (
@@ -13,10 +15,11 @@ function App() {
       <main id="home">
         <About />
         <Experience />
-        <Skills />
+        {/* <Skills />
         <Projects />
         <Hoppies />
-        <Contacts />
+        <Contacts /> */}
+        <Footer/>
       </main>
     </>
   )
