@@ -7,7 +7,7 @@ import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 const Footer = () => {
   return (
-    <footer className="border-t border-border bg-page text-text-primary">
+    <footer  id="contact"  className="border-t border-border bg-page text-text-primary">
       {/* Contact Section */}
       <section
         id="contact"

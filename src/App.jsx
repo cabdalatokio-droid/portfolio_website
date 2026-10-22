@@ -4,7 +4,6 @@ import Experience from './components/Experience'
 import Skills from './components/Skills'
 import Projects from './components/Projects'
 import Hoppies from './components/Hoppies'
-import Contacts from './components/Contacts'
 import Footer from './components/Footer'
 
 
