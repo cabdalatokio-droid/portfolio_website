@@ -1,46 +1,47 @@
+
 @import "tailwindcss";
 
 @theme {
-  /* Brand Colors */
-  --color-brand-50: #EEF2FF;
-  --color-brand-100: #E0E7FF;
-  --color-brand-200: #C7D2FE;
-  --color-brand-300: #A5B4FC;
-  --color-brand-400: #818CF8;
-  --color-brand-500: #6366F1;
-  --color-brand-600: #4F46E5;
-  --color-brand-700: #4338CA;
-  --color-brand-800: #3730A3;
-  --color-brand-900: #312E81;
+  /* Brand Colors — Violet and Lavender */
+  --color-brand-50: #F5F3FF;
+  --color-brand-100: #EDE9FE;
+  --color-brand-200: #DDD6FE;
+  --color-brand-300: #C4B5FD;
+  --color-brand-400: #A78BFA;
+  --color-brand-500: #8B5CF6;
+  --color-brand-600: #7C3AED;
+  --color-brand-700: #6D28D9;
+  --color-brand-800: #5B21B6;
+  --color-brand-900: #4C1D95;
 
-  /* Backgrounds & surfaces */
-  --color-page: #F8FAFC;
-  --color-surface: #FFFFFF;
-  --color-surface-soft: #F1F5F9;
-  --color-surface-hover: #EEF2FF;
+  /* Backgrounds & Surfaces */
+  --color-page: #0B0D12;
+  --color-surface: #11141C;
+  --color-surface-soft: #171A23;
+  --color-surface-hover: #1D2029;
 
   /* Text */
-  --color-text-primary: #0F172A;
-  --color-text-secondary: #475569;
-  --color-text-muted: #64748B;
+  --color-text-primary: #F8FAFC;
+  --color-text-secondary: #C0CAD8;
+  --color-text-muted: #8F9EB2;
   --color-text-inverse: #FFFFFF;
 
   /* Borders */
-  --color-border: #E2E8F0;
-  --color-border-strong: #CBD5E1;
+  --color-border: #272C37;
+  --color-border-strong: #363C49;
 
-  /* Semantic colors */
-  --color-success: #16A34A;
-  --color-warning: #D97706;
-  --color-danger: #DC2626;
-  --color-info: #2563EB;
+  /* Semantic Colors */
+  --color-success: #10B981;
+  --color-warning: #FB923C;
+  --color-danger: #F87171;
+  --color-info: #A78BFA;
 
   /* Typography */
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
   --font-display: "Poppins", ui-sans-serif, sans-serif;
   --font-mono: "JetBrains Mono", monospace;
 
-  /* Font sizes */
+  /* Font Sizes */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -52,11 +53,11 @@
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
 
-  /* Line heights */
+  /* Line Heights */
   --leading-body: 1.7;
   --leading-heading: 1.15;
 
-  /* Letter spacing */
+  /* Letter Spacing */
   --tracking-brand: -0.035em;
 
   /* Corners */
@@ -65,34 +66,40 @@
   --radius-pill: 9999px;
 
   /* Shadows */
-  --shadow-card: 0 4px 24px rgb(15 23 42 / 0.06);
-  --shadow-card-hover: 0 12px 32px rgb(15 23 42 / 0.10);
-  --shadow-brand: 0 6px 18px rgb(79 70 229 / 0.22);
+  --shadow-card: 0 4px 24px rgb(0 0 0 / 0.20);
+  --shadow-card-hover: 0 12px 32px rgb(0 0 0 / 0.35);
+  --shadow-brand: 0 6px 18px rgb(139 92 246 / 0.24);
 
-  /* Animation timing */
+  /* Animation Timing */
   --ease-brand: cubic-bezier(0.2, 0.8, 0.2, 1);
+
+  /* Custom Breakpoint */
   --breakpoint-xs: 30rem;
 }
 
-/* Keep your custom CSS variables and classes below the @theme block */
+/* Custom CSS Variables */
 :root {
   --page-max-width: 1200px;
   --navbar-height: 76px;
+
   --transition-fast: 150ms;
   --transition-normal: 250ms;
 }
 
+/* Page Behavior */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: var(--navbar-height);
 }
 
+/* Page Sections */
 .page-section {
   min-height: calc(100vh - var(--navbar-height));
   padding-block: 4rem;
   scroll-margin-top: var(--navbar-height);
 }
 
+/* Accessibility: Reduce Motion */
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

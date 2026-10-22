@@ -6,33 +6,31 @@ const About = () => {
     <section
       id="about"
       aria-labelledby="about-heading"
-      className="relative isolate overflow-hidden bg-slate-50 px-4 py-20 sm:px-6 lg:px-8 lg:py-28"
+      className="relative isolate overflow-hidden bg-page px-4 py-20 text-text-primary sm:px-6 lg:px-8 lg:py-28"
     >
-      {/* Subtle brand background */}
+      {/* Subtle gold background glow */}
       <div
         aria-hidden="true"
-        className="pointer-events-none absolute -right-40 -top-40 -z-10 h-96 w-96 rounded-full bg-[#EEF2FF] blur-3xl"
+        className="pointer-events-none absolute -right-40 -top-40 -z-10 h-96 w-96 rounded-full bg-brand-500/10 blur-3xl"
       />
 
       <div className="mx-auto grid w-full max-w-7xl grid-cols-1 items-center gap-14 lg:grid-cols-12 lg:gap-16">
-
         {/* Left: Introduction */}
         <div className="flex flex-col items-start lg:col-span-7">
-
           {/* Location and specialty */}
-          <div className="mb-7 inline-flex max-w-full items-center gap-2.5 rounded-full border border-indigo-100 bg-white px-4 py-2 shadow-sm">
+          <div className="mb-7 inline-flex max-w-full items-center gap-2.5 rounded-pill border border-border bg-surface px-4 py-2 shadow-card">
             <span className="relative flex h-2.5 w-2.5 shrink-0">
-              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-indigo-400 opacity-50" />
-              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-[#4F46E5]" />
+              <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-50" />
+              <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-brand-500" />
             </span>
 
-            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">
+            <span className="text-xs font-semibold uppercase tracking-[0.12em] text-text-secondary">
               Arbaminch, Ethiopia
             </span>
 
-            <span className="hidden h-4 w-px bg-slate-200 sm:block" />
+            <span className="hidden h-4 w-px bg-border sm:block" />
 
-            <span className="hidden text-xs font-semibold uppercase tracking-wider text-[#4F46E5] sm:block">
+            <span className="hidden text-xs font-semibold uppercase tracking-wider text-brand-400 sm:block">
               Software Engineer
             </span>
           </div>
@@ -40,47 +38,44 @@ const About = () => {
           {/* Main heading */}
           <h1
             id="about-heading"
-            className="max-w-3xl text-4xl font-extrabold leading-[1.12] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl"
+            className="max-w-3xl font-display text-4xl font-extrabold leading-heading tracking-brand text-text-primary sm:text-5xl lg:text-6xl"
           >
             Hi, I'm{' '}
-            <span className="text-[#4F46E5]">
+            <span className="text-brand-400">
               Abdullahi Mohamed
             </span>
-            <span className="text-[#4F46E5]">.</span>
+            <span className="text-brand-500">.</span>
 
-            <span className="mt-4 block text-3xl font-bold leading-tight text-[#312E81] sm:text-4xl lg:text-[2.75rem]">
+            <span className="mt-4 block text-3xl font-bold leading-tight text-text-primary sm:text-4xl lg:text-[2.75rem]">
               Building modern web applications that solve real problems.
             </span>
           </h1>
 
           {/* Introduction */}
-          <p className="mt-7 max-w-2xl text-base leading-8 text-slate-600 sm:text-lg">
+          <p className="mt-7 max-w-2xl text-base leading-body text-text-secondary sm:text-lg">
             I'm a software engineering student based in Ethiopia,
             focused on building reliable, maintainable, and user-friendly
             web applications. I work with{' '}
-            <strong className="font-semibold text-slate-900">
+            <strong className="font-semibold text-text-primary">
               React
             </strong>
             ,{' '}
-            <strong className="font-semibold text-slate-900">
+            <strong className="font-semibold text-text-primary">
               Node.js
             </strong>
             , and{' '}
-            <strong className="font-semibold text-slate-900">
+            <strong className="font-semibold text-text-primary">
               Tailwind CSS
             </strong>{' '}
             to turn ideas into practical software, from responsive
             interfaces to full-stack applications.
           </p>
 
-  
-        
-
           {/* Action buttons */}
           <div className="mt-9 flex w-full flex-wrap items-center gap-3">
             <a
               href="#projects"
-              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-xl bg-[#4F46E5] px-5 py-3 text-sm font-semibold text-white shadow-lg shadow-indigo-200/70 transition duration-200 hover:-translate-y-0.5 hover:bg-[#4338CA] hover:shadow-xl active:translate-y-0"
+              className="group inline-flex min-h-12 items-center justify-center gap-2 rounded-button bg-brand-500 px-5 py-3 text-sm font-semibold text-text-inverse shadow-brand transition-all duration-200 ease-brand hover:-translate-y-0.5 hover:bg-brand-400 hover:shadow-card-hover active:translate-y-0"
             >
               Explore My Projects
 
@@ -100,14 +95,13 @@ const About = () => {
               </svg>
             </a>
 
-                    
             <a
               href="/resume.pdf"
               download="Abdullahi-Mohamed-Resume.pdf"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-indigo-200 hover:bg-[#EEF2FF] hover:text-[#312E81]"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-button border border-border-strong bg-surface px-5 py-3 text-sm font-semibold text-text-primary shadow-card transition-all duration-200 ease-brand hover:-translate-y-0.5 hover:border-brand-500 hover:bg-surface-hover active:translate-y-0"
             >
               <svg
-                className="h-4 w-4 text-[#4F46E5]"
+                className="h-4 w-4 text-brand-400"
                 viewBox="0 0 24 24"
                 fill="none"
                 stroke="currentColor"
@@ -124,13 +118,12 @@ const About = () => {
               Download Resume
             </a>
 
-
             <a
               href="https://github.com/cabdalatokio-droid"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit my GitHub profile"
-              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 py-3 text-sm font-semibold text-slate-700 shadow-sm transition duration-200 hover:-translate-y-0.5 hover:border-indigo-200 hover:bg-[#EEF2FF] hover:text-[#312E81]"
+              className="inline-flex min-h-12 items-center justify-center gap-2 rounded-button border border-border-strong bg-surface px-5 py-3 text-sm font-semibold text-text-primary shadow-card transition-all duration-200 ease-brand hover:-translate-y-0.5 hover:border-brand-500 hover:bg-surface-hover active:translate-y-0"
             >
               <svg
                 className="h-4 w-4"
@@ -152,51 +145,49 @@ const About = () => {
 
         {/* Right: Profile card */}
         <div className="relative mx-auto w-full max-w-md lg:col-span-5 lg:mx-0 lg:ml-auto">
-
-          {/* Soft brand glow */}
+          {/* Gold ambient glow */}
           <div
             aria-hidden="true"
-            className="absolute -inset-4 -z-10 rounded-[2rem] bg-gradient-to-br from-indigo-200 via-[#EEF2FF] to-indigo-100 opacity-80 blur-2xl"
+            className="absolute -inset-4 -z-10 rounded-card bg-gradient-to-br from-brand-500/20 via-surface to-brand-800/10 opacity-80 blur-2xl"
           />
 
-          <div className="overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-4 shadow-xl shadow-indigo-950/[0.06] sm:p-5">
-
+          <div className="overflow-hidden rounded-card border border-border bg-surface p-4 shadow-card sm:p-5">
             {/* Profile card header */}
-            <div className="flex items-center justify-between gap-3 border-b border-slate-100 pb-4">
+            <div className="flex items-center justify-between gap-3 border-b border-border pb-4">
               <div className="flex items-center gap-3">
-                <span className="flex h-10 w-10 items-center justify-center rounded-xl bg-[#EEF2FF] text-sm font-bold text-[#4F46E5]">
+                <span className="flex h-10 w-10 items-center justify-center rounded-button border border-brand-500/20 bg-brand-500/10 text-sm font-bold text-brand-400">
                   AM
                 </span>
 
                 <div>
-                  <p className="text-sm font-bold text-slate-900">
+                  <p className="text-sm font-bold text-text-primary">
                     Abdullahi Mohamed
                   </p>
-                  <p className="mt-0.5 text-xs text-slate-500">
+                  <p className="mt-0.5 text-xs text-text-muted">
                     Software Engineering Student
                   </p>
                 </div>
               </div>
 
-              <span className="flex shrink-0 items-center gap-1.5 rounded-full bg-emerald-50 px-2.5 py-1.5 text-xs font-semibold text-emerald-700">
-                <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+              <span className="flex shrink-0 items-center gap-1.5 rounded-pill border border-success/20 bg-success/10 px-2.5 py-1.5 text-xs font-semibold text-success">
+                <span className="h-1.5 w-1.5 rounded-full bg-success" />
                 Available for Hire
               </span>
             </div>
 
             {/* Profile image */}
-            <div className="relative mt-4 overflow-hidden rounded-2xl bg-[#EEF2FF]">
+            <div className="relative mt-4 overflow-hidden rounded-card bg-surface-soft">
               <img
-                src="public/ChatGPT Image Nov 17, 2025, 05_52_58 PM.png"
+                src="/ChatGPT%20Image%20Nov%2017,%202025,%2005_52_58%20PM.png"
                 alt="Abdullahi Mohamed"
-                className="aspect-[4/5] w-full object-cover object-top transition-transform duration-500 ease-out hover:scale-[1.03]"
+                className="aspect-[4/5] w-full object-cover object-top transition-transform duration-500 ease-brand hover:scale-[1.03]"
               />
             </div>
 
             {/* Technology panels */}
             <div className="mt-4 grid grid-cols-2 gap-3">
-              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5 transition-colors hover:border-indigo-100 hover:bg-[#EEF2FF]">
-                <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white text-[#4F46E5] shadow-sm">
+              <div className="rounded-button border border-border bg-surface-soft p-3.5 transition-colors duration-200 hover:border-brand-500/40 hover:bg-surface-hover">
+                <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-surface text-brand-400 shadow-card">
                   <svg
                     className="h-4 w-4"
                     viewBox="0 0 24 24"
@@ -219,16 +210,16 @@ const About = () => {
                   </svg>
                 </div>
 
-                <p className="text-sm font-bold text-slate-900">
+                <p className="text-sm font-bold text-text-primary">
                   Frontend
                 </p>
-                <p className="mt-1 text-xs leading-5 text-slate-500">
+                <p className="mt-1 text-xs leading-5 text-text-muted">
                   React, Tailwind CSS
                 </p>
               </div>
 
-              <div className="rounded-xl border border-slate-100 bg-slate-50 p-3.5 transition-colors hover:border-indigo-100 hover:bg-[#EEF2FF]">
-                <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg bg-white text-[#4F46E5] shadow-sm">
+              <div className="rounded-button border border-border bg-surface-soft p-3.5 transition-colors duration-200 hover:border-brand-500/40 hover:bg-surface-hover">
+                <div className="mb-3 flex h-8 w-8 items-center justify-center rounded-lg border border-border bg-surface text-brand-400 shadow-card">
                   <svg
                     className="h-4 w-4"
                     viewBox="0 0 24 24"
@@ -250,18 +241,16 @@ const About = () => {
                   </svg>
                 </div>
 
-                <p className="text-sm font-bold text-slate-900">
+                <p className="text-sm font-bold text-text-primary">
                   Backend
                 </p>
-                <p className="mt-1 text-xs leading-5 text-slate-500">
+                <p className="mt-1 text-xs leading-5 text-text-muted">
                   Node.js, Supabase
                 </p>
               </div>
             </div>
-
           </div>
         </div>
-
       </div>
     </section>
   );
