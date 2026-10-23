@@ -14,8 +14,8 @@ function App() {
       <main id="home">
         <About />
         <Experience />
-        {/* <Skills />
-        <Projects />
+        <Skills />
+        {/* <Projects />
         <Hoppies />
         <Contacts /> */}
         <Footer/>
