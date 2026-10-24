@@ -1,16 +1,6 @@
 
 const skillGroups = [
-  {
-    title: "Mobile (Flutter & Dart)",
-    icon: "mobile",
-    skills: [
-      "Flutter SDK & Cross-Platform",
-      "State Management (Riverpod / Provider)",
-      "Native Platform Integration",
-      "Offline-First & SQLite",
-      "App Store & Google Play Release",
-    ],
-  },
+
   {
     title: "Web (React & Next.js)",
     icon: "web",
@@ -125,7 +115,7 @@ const Skills = () => {
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-4 xl:gap-8">
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
           {skillGroups.map((group) => (
             <article
               key={group.title}
