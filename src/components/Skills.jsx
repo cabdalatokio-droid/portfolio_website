@@ -93,10 +93,10 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="page-section !pt-2 !pb-12 bg-page px-2 sm:px-3"
+      className="page-section !pt-2 !pb-12 bg-page px-4 sm:px-6"
       aria-labelledby="skills-heading"
     >
-      <div className="w-full">
+      <div className="mx-auto w-full max-w-[1200px]">
         <header className="mb-14 sm:mb-20 xl:mb-[92px]">
           <p className="text-base font-semibold uppercase leading-6 tracking-[0.18em] text-brand-400">
             Capabilities
