@@ -38,8 +38,8 @@ const skillGroups = [
 
 const SkillIcon = ({ type }) => {
   const common = {
-    width: 28,
-    height: 28,
+    width: 27,
+    height: 27,
     viewBox: "0 0 24 24",
     fill: "none",
     stroke: "currentColor",
