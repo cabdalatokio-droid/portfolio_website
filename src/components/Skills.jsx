@@ -1,6 +1,5 @@
 
 const skillGroups = [
-
   {
     title: "Web (React & Next.js)",
     icon: "web",
@@ -93,51 +92,82 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className="page-section !pt-2 !pb-12 bg-page px-4 sm:px-6"
+      className="page-section bg-page px-4 !pt-8 !pb-16 sm:px-6 lg:!pt-12 lg:!pb-20"
       aria-labelledby="skills-heading"
     >
       <div className="mx-auto w-full max-w-[1200px]">
-        <header className="mb-14 sm:mb-20 xl:mb-[92px]">
-          <p className="text-base font-semibold uppercase leading-6 tracking-[0.18em] text-brand-400">
+        {/* Section heading */}
+        <header className="mb-10 max-w-3xl sm:mb-14">
+          <p className="inline-flex items-center gap-2 rounded-full border border-brand-500/20 bg-brand-500/5 px-3 py-1.5 text-xs font-bold uppercase tracking-[0.18em] text-brand-400 sm:text-sm">
+            <span className="size-1.5 rounded-full bg-brand-500" />
             Capabilities
           </p>
 
           <h2
             id="skills-heading"
-            className="mt-2 font-display text-[38px] font-bold leading-[1.12] tracking-brand text-text-primary sm:text-[52px]"
+            className="mt-5 font-display text-4xl font-bold leading-tight tracking-brand text-text-primary sm:text-5xl lg:text-6xl"
           >
-            Technical Expertise
+            Technical{" "}
+            <span className="text-brand-400">Expertise</span>
           </h2>
 
-          <p className="mt-4 max-w-5xl text-lg leading-relaxed text-text-muted sm:text-[23px]">
-            The languages, tools, and platforms I reach for to take ideas
-            from empty folder to production.
+          <p className="mt-5 max-w-2xl text-base leading-7 text-text-muted sm:text-lg sm:leading-8">
+            The languages, tools, and platforms I use to turn ideas into
+            reliable, production-ready applications.
           </p>
         </header>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3 xl:gap-8">
+        {/* Skill cards */}
+        <div className="grid grid-cols-1 items-stretch gap-5 md:grid-cols-2 xl:grid-cols-3 xl:gap-6">
           {skillGroups.map((group) => (
             <article
               key={group.title}
-              className="min-h-[380px] rounded-card border border-border bg-surface p-6 shadow-card transition-all duration-300 ease-brand hover:-translate-y-1 hover:border-brand-500/60 hover:bg-surface-soft hover:shadow-card-hover sm:p-7 xl:p-9"
+              className="group relative isolate h-full overflow-hidden rounded-3xl border border-border bg-surface p-5 shadow-card transition-all duration-300 ease-out hover:-translate-y-2 hover:border-brand-500/50 hover:shadow-xl motion-reduce:transform-none motion-reduce:transition-none sm:p-6 lg:p-7"
             >
-              <div className="flex items-center gap-4 border-b border-border pb-5">
-                <span className="shrink-0 text-brand-400">
+              {/* Subtle top accent */}
+              <div
+                aria-hidden="true"
+                className="absolute inset-x-6 top-0 h-px bg-gradient-to-r from-transparent via-brand-400 to-transparent opacity-30 transition-opacity duration-300 group-hover:opacity-100"
+              />
+
+              {/* Decorative hover glow */}
+              <div
+                aria-hidden="true"
+                className="pointer-events-none absolute -right-16 -top-16 -z-10 size-44 rounded-full bg-brand-500/5 blur-3xl transition-all duration-500 group-hover:scale-150 group-hover:bg-brand-500/10"
+              />
+
+              <div className="flex items-center gap-4 border-b border-border/80 pb-5">
+                {/* Animated icon */}
+                <span className="flex size-12 shrink-0 items-center justify-center rounded-2xl border border-brand-500/20 bg-brand-500/10 text-brand-400 transition-all duration-300 group-hover:rotate-3 group-hover:scale-110 group-hover:bg-brand-500/15 group-hover:text-brand-300">
                   <SkillIcon type={group.icon} />
                 </span>
 
-                <h3 className="font-display text-xl font-bold leading-snug tracking-brand text-text-primary">
-                  {group.title}
-                </h3>
+                <div className="min-w-0 flex-1">
+                  <h3 className="font-display text-lg font-bold leading-snug tracking-brand text-text-primary transition-colors duration-300 group-hover:text-brand-400 sm:text-xl">
+                    {group.title}
+                  </h3>
+
+                  <p className="mt-1 text-xs font-medium text-text-muted">
+                    {group.skills.length} focus areas
+                  </p>
+                </div>
+
+                <span
+                  aria-hidden="true"
+                  className="text-xl text-text-muted/50 transition-all duration-300 group-hover:translate-x-1 group-hover:text-brand-400"
+                >
+                  →
+                </span>
               </div>
 
-              <ul className="mt-6 space-y-3">
+              <ul className="mt-5 space-y-1">
                 {group.skills.map((skill) => (
                   <li
                     key={skill}
-                    className="flex items-start gap-4 text-[17px] leading-[1.55] text-text-secondary sm:text-lg"
+                    className="group/skill flex items-start gap-3 rounded-xl px-3 py-2.5 text-[15px] leading-6 text-text-secondary transition-colors duration-200 hover:bg-brand-500/5 hover:text-text-primary sm:text-base"
                   >
-                    <span className="mt-[10px] size-[9px] shrink-0 rounded-full bg-brand-500" />
+                    <span className="mt-[9px] size-2 shrink-0 rounded-full bg-brand-500/70 transition-all duration-200 group-hover/skill:scale-150 group-hover/skill:bg-brand-400" />
+
                     <span>{skill}</span>
                   </li>
                 ))}
