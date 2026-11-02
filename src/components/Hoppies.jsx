@@ -3,7 +3,7 @@ import { Trophy, Dumbbell } from "lucide-react";
 const Hobbies = () => {
   return (
     <section
-      id="hobbies"
+      id="hoppies"
       className="page-section bg-page px-4 text-text-primary sm:px-6"
       aria-labelledby="hobbies-heading"
     >
