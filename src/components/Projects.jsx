@@ -27,7 +27,7 @@ const projects = [
   },
   {
     number: "02",
-    title: "Bole Public Commodity Distribution",
+    title: "Garowe Public Commodity Distribution",
     category: "Full-Stack Application",
     description:
       "A MERN-stack application developed around public commodity distribution workflows.",
